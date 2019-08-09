@@ -242,7 +242,6 @@
     <None Include="src\ic_memory_good.png" />
     <None Include="src\ic_os_update_bad.png" />
     <None Include="src\ic_password_lock_bad.png" />
-    <None Include="main.cpp" />
     <None Include="main.qml" />
     <QtRcc Include="qml.qrc">
       <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">qml</InitFuncName>

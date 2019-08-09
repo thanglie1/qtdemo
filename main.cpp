@@ -27,20 +27,20 @@ int main(int argc, char *argv[])
 	Controller* controllerDashboard = new Controller();
     context->setContextProperty("controllerDashboard", controllerDashboard);
 
-	Controller* controllerScanning = new Controller();
-	context->setContextProperty("controllerScanning", controllerScanning);
-    
-    QTranslator translator;
-    QStringList languages;
-	languages << "English" << "Vietnamese";
-    QString lang = QInputDialog::getItem(NULL, "Select Language", "Language", languages );
-    if (lang == "Vietnamese"){
-        translator.load(":/Vietnamese.qm");
-        //guiTranslator.load("");
-    }
-    if (lang != "English"){
-        app.installTranslator(&translator);
-    }
+	//Controller* controllerScanning = new Controller();
+	//context->setContextProperty("controllerScanning", controllerScanning);
+ //   
+ //   QTranslator translator;
+ //   QStringList languages;
+	//languages << "English" << "Vietnamese";
+ //   QString lang = QInputDialog::getItem(NULL, "Select Language", "Language", languages );
+ //   if (lang == "Vietnamese"){
+ //       translator.load(":/Vietnamese.qm");
+ //       //guiTranslator.load("");
+ //   }
+ //   if (lang != "English"){
+ //       app.installTranslator(&translator);
+ //   }
 
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
 
