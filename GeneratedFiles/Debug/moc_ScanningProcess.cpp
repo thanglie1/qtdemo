@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_ScanningProcess_t {
     QByteArrayData data[5];
-    char stringdata0[43];
+    char stringdata0[46];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -35,11 +35,11 @@ QT_MOC_LITERAL(0, 0, 15), // "ScanningProcess"
 QT_MOC_LITERAL(1, 16, 11), // "resultReady"
 QT_MOC_LITERAL(2, 28, 0), // ""
 QT_MOC_LITERAL(3, 29, 6), // "result"
-QT_MOC_LITERAL(4, 36, 6) // "doWork"
+QT_MOC_LITERAL(4, 36, 9) // "startWork"
 
     },
     "ScanningProcess\0resultReady\0\0result\0"
-    "doWork"
+    "startWork"
 };
 #undef QT_MOC_LITERAL
 
@@ -63,7 +63,7 @@ static const uint qt_meta_data_ScanningProcess[] = {
        4,    0,   27,    2, 0x0a /* Public */,
 
  // signals: parameters
-    QMetaType::Void, QMetaType::QString,    3,
+    QMetaType::Void, QMetaType::Int,    3,
 
  // slots: parameters
     QMetaType::Void,
@@ -77,14 +77,14 @@ void ScanningProcess::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         auto *_t = static_cast<ScanningProcess *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->resultReady((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 1: _t->doWork(); break;
+        case 0: _t->resultReady((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 1: _t->startWork(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (ScanningProcess::*)(const QString & );
+            using _t = void (ScanningProcess::*)(int );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&ScanningProcess::resultReady)) {
                 *result = 0;
                 return;
@@ -134,7 +134,7 @@ int ScanningProcess::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void ScanningProcess::resultReady(const QString & _t1)
+void ScanningProcess::resultReady(int _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);

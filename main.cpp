@@ -6,7 +6,7 @@
 #include <Controller.h>
 #include <qqmlcontext.h>
 #include <maf/messaging/client-server/ipc/LocalIPCClient.h>
-#include "..\..\GearsService\GearsContract.h"
+#include "..\..\gears-service\GearsContract.h"
 
 using namespace maf::messaging::ipc;
 using namespace maf::messaging;

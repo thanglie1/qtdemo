@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Controller_t {
-    QByteArrayData data[7];
-    char stringdata0[79];
+    QByteArrayData data[8];
+    char stringdata0[88];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -35,13 +35,14 @@ QT_MOC_LITERAL(0, 0, 10), // "Controller"
 QT_MOC_LITERAL(1, 11, 20), // "scanningValueChanged"
 QT_MOC_LITERAL(2, 32, 0), // ""
 QT_MOC_LITERAL(3, 33, 7), // "operate"
-QT_MOC_LITERAL(4, 41, 13), // "handleResults"
-QT_MOC_LITERAL(5, 55, 9), // "onClicked"
-QT_MOC_LITERAL(6, 65, 13) // "scanningValue"
+QT_MOC_LITERAL(4, 41, 16), // "setScanningValue"
+QT_MOC_LITERAL(5, 58, 5), // "value"
+QT_MOC_LITERAL(6, 64, 9), // "onClicked"
+QT_MOC_LITERAL(7, 74, 13) // "scanningValue"
 
     },
     "Controller\0scanningValueChanged\0\0"
-    "operate\0handleResults\0onClicked\0"
+    "operate\0setScanningValue\0value\0onClicked\0"
     "scanningValue"
 };
 #undef QT_MOC_LITERAL
@@ -65,18 +66,18 @@ static const uint qt_meta_data_Controller[] = {
 
  // slots: name, argc, parameters, tag, flags
        4,    1,   36,    2, 0x0a /* Public */,
-       5,    0,   39,    2, 0x0a /* Public */,
+       6,    0,   39,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void,
     QMetaType::Void,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::QString,    2,
+    QMetaType::Void, QMetaType::Int,    5,
     QMetaType::Void,
 
  // properties: name, type, flags
-       6, QMetaType::QString, 0x00495103,
+       7, QMetaType::QString, 0x00495001,
 
  // properties: notify_signal_id
        0,
@@ -92,7 +93,7 @@ void Controller::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         switch (_id) {
         case 0: _t->scanningValueChanged(); break;
         case 1: _t->operate(); break;
-        case 2: _t->handleResults((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 2: _t->setScanningValue((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 3: _t->onClicked(); break;
         default: ;
         }
@@ -123,13 +124,6 @@ void Controller::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         default: break;
         }
     } else if (_c == QMetaObject::WriteProperty) {
-        auto *_t = static_cast<Controller *>(_o);
-        Q_UNUSED(_t)
-        void *_v = _a[0];
-        switch (_id) {
-        case 0: _t->setScanningValue(*reinterpret_cast< QString*>(_v)); break;
-        default: break;
-        }
     } else if (_c == QMetaObject::ResetProperty) {
     }
 #endif // QT_NO_PROPERTIES

@@ -84,7 +84,7 @@ Page {
         }
         Label {
             id: lbScanningTitle
-            text: VARIABLES.STR_SCANNING_TITLE;
+            text: "Process xyzz ...";
             anchors.bottom: lbPercentage.top
             anchors.bottomMargin: 10
             anchors.horizontalCenter: parent.horizontalCenter

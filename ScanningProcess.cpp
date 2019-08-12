@@ -1,5 +1,5 @@
 #include "ScanningProcess.h"
-#include "..\..\GearsService\GearsContract.h"
+#include "..\..\gears-service\GearsContract.h"
 using namespace maf::messaging::ipc;
 using namespace maf::messaging;
 
@@ -19,16 +19,13 @@ ScanningProcess::ScanningProcess() {
 		_serviceProxy = LocalIPCServiceProxy::createProxy(SERVICE_ID_SCANNING_SERVICE);
 		});
 }
-
-ScanningProcess* ScanningProcess::getInstance()
-{
+ScanningProcess* ScanningProcess::getInstance() {
 	if (m_instance == NULL)
 	{
 		m_instance = new ScanningProcess();
 	}
 	return m_instance;
 }
-
 void ScanningProcess::startWork() {
 	_comp.postMessage<ScanRequestMessage>();
 }

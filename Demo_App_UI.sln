@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29123.89
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo_App_UI", "Demo_App_UI.vcxproj", "{3BE943DD-877F-3D5C-AB7D-F8328F9D318F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GearsService", "..\GearsService\GearsService.vcxproj", "{DB2A44C8-F885-4ACA-9150-9492FDDF660F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GearsService", "..\gears-service\GearsService.vcxproj", "{DB2A44C8-F885-4ACA-9150-9492FDDF660F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
