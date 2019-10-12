@@ -6,26 +6,35 @@ using namespace maf::messaging;
 class ScanRequestMessage :public maf::messaging::InternalMessage {
 };
 
-ScanningProcess* ScanningProcess::m_instance = 0;
+ScanningProcess* ScanningProcess::m_instance = nullptr;
 
 ScanningProcess::ScanningProcess() {
-	_comp.onSignal<ScanRequestMessage>([this] {
-		_scanrequestId = _serviceProxy->sendRequest<ScanningStatusResult>([this](const std::shared_ptr<ScanningStatusResult>& status) {
-			_scanningValue = status->props().get_percentage();
+    onSignal<ScanRequestMessage>([this] {
+        _scanrequestId = _serviceProxy->sendRequest<ScanningStatus::Result>(ScanningStatus::makeRequest(), [this](const std::shared_ptr<ScanningStatus::Result>& status) {
+            _scanningValue = status->percentage();
 			emit resultReady(_scanningValue);
 			});
 		});
-	_comp.start([this] {
-		_serviceProxy = LocalIPCServiceProxy::createProxy(SERVICE_ID_SCANNING_SERVICE);
-		});
+    run();
 }
+
 ScanningProcess* ScanningProcess::getInstance() {
-	if (m_instance == NULL)
+    if (!m_instance)
 	{
 		m_instance = new ScanningProcess();
 	}
-	return m_instance;
+    return m_instance;
+}
+
+void ScanningProcess::onEntry()
+{
+    _serviceProxy = LocalIPCServiceProxy::createProxy(SERVICE_ID_SCANNING_SERVICE);
+}
+
+void ScanningProcess::onExit()
+{
+
 }
 void ScanningProcess::startWork() {
-	_comp.postMessage<ScanRequestMessage>();
+    postMessage<ScanRequestMessage>();
 }

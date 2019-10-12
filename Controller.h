@@ -10,8 +10,7 @@ class Controller : public QObject
     Q_PROPERTY(QString scanningValue READ getScanningValue NOTIFY scanningValueChanged)
 private:
 	int _scanningValue = 0;
-	std::shared_ptr<maf::messaging::ipc::LocalIPCServiceProxy> _serviceProxy;
-	maf::messaging::Component _comp;
+    std::shared_ptr<maf::messaging::ipc::LocalIPCServiceProxy> _serviceProxy;
 
 public:
 	Controller();
