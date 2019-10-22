@@ -127,7 +127,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include\QtQuick;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include\QtWidgets;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include\QtGui;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include\QtANGLE;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include\QtQml;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include\QtNetwork;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include\QtCore;debug;C:\VulkanSDK\1.0.51.0\include;D:\Project\MessagingAppFramework\include;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include\QtQuick;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include\QtWidgets;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include\QtGui;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include\QtANGLE;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include\QtQml;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include\QtNetwork;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include\QtCore;debug;C:\VulkanSDK\1.0.51.0\include;D:\Project\Qt\grsc-ui-client\MessagingAppFramework\include;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>debug\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -147,7 +147,7 @@
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>$(QTDIR)\lib\Qt5Quickd.lib;$(QTDIR)\lib\Qt5Widgetsd.lib;D:\Project\MessagingAppFramework\\Test\bin\Libs\maf\$(Platform)\Debug\maf.lib;$(QTDIR)\lib\Qt5Guid.lib;$(QTDIR)\lib\Qt5Qmld.lib;$(QTDIR)\lib\Qt5Networkd.lib;$(QTDIR)\lib\Qt5Cored.lib;$(QTDIR)\lib\qtmaind.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(QTDIR)\lib\Qt5Quickd.lib;$(QTDIR)\lib\Qt5Widgetsd.lib;D:\Project\Qt\grsc-ui-client\MessagingAppFramework\Test\bin\Libs\maf\$(Platform)\Debug\maf.lib;$(QTDIR)\lib\Qt5Guid.lib;$(QTDIR)\lib\Qt5Qmld.lib;$(QTDIR)\lib\Qt5Networkd.lib;$(QTDIR)\lib\Qt5Cored.lib;$(QTDIR)\lib\qtmaind.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(QTDIR)\lib;D:\DEVTOOL\QT\5.12.3\MSVC2015_64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
       <DataExecutionPrevention>true</DataExecutionPrevention>
@@ -175,7 +175,7 @@
       <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
       <InputFile>%(FullPath)</InputFile>
       <DynamicSource>output</DynamicSource>
-      <IncludePath>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include\QtQuick;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include\QtWidgets;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include\QtGui;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include\QtANGLE;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include\QtQml;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include\QtNetwork;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include\QtCore;debug;C:\VulkanSDK\1.0.51.0\include;D:\Project\MessagingAppFramework\include;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</IncludePath>
+      <IncludePath>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include\QtQuick;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include\QtWidgets;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include\QtGui;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include\QtANGLE;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include\QtQml;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include\QtNetwork;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\include\QtCore;debug;C:\VulkanSDK\1.0.51.0\include;D:\Project\Qt\grsc-ui-client\MessagingAppFramework\include;..\..\..\DEVTOOL\QT\5.12.3\MSVC2015_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</IncludePath>
     </QtMoc>
     <QtRcc>
       <QTDIR>D:\DEVTOOL\QT\5.12.3\MSVC2015_64</QTDIR>
