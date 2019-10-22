@@ -39,7 +39,8 @@ HEADERS += \
     controller.h \
     scanningprocess.h
 
-win32: LIBS += -L$$PWD/../build-MessagingAppFramework-Desktop_Qt_5_12_2_MSVC2017_64bit-Debug/ -lmaf
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../MessagingAppFramework/build/release/ -lmaf
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../MessagingAppFramework/build/debug/ -lmaf
 
-INCLUDEPATH += $$PWD/../build-MessagingAppFramework-Desktop_Qt_5_12_2_MSVC2017_64bit-Debug
-DEPENDPATH += $$PWD/../build-MessagingAppFramework-Desktop_Qt_5_12_2_MSVC2017_64bit-Debug
+INCLUDEPATH += $$PWD/../MessagingAppFramework/build/Debug
+DEPENDPATH += $$PWD/../MessagingAppFramework/build/Debug

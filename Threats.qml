@@ -82,6 +82,7 @@ Page {
                     onEntered: {
                         randomColor = Qt.rgba(Math.random(),Math.random(), Math.random(), 1);
                         nameField.color = randomColor;
+                        fileDetails.color = randomColor;
                     }
 //                    onClicked: {
 //                        randomColor = Qt.rgba(Math.random(),Math.random(), Math.random(), 1);
@@ -158,6 +159,7 @@ Page {
                         Behavior on color{
                             ColorAnimation { duration: 300;}
                         }
+                        color: fileDetails.color
                     }
                     Rectangle {
                         id: copyField
@@ -172,7 +174,6 @@ Page {
                             onClicked: {
                                 randomColor = Qt.rgba(Math.random(),Math.random(), Math.random(), 1);
                                 nameField.color = randomColor;
-
                                 //column.height = detailItem.visible ? fileDetails.height : fileDetails.height + detailItem.height;
                                 column.state = detailItem.visible ? "OFF" : "ON";
                             }
@@ -198,9 +199,32 @@ Page {
                 id: detailItem
                 width: parent.width;
                 height: 100;
-                color: "red";
+                color: "lightsteelblue";
                 visible: false;
                 opacity: 0;
+                Rectangle {
+                    id : percentBar
+                    width: 1000;
+                    height: 10;
+                    color: "green";
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    anchors.verticalCenter: parent.verticalCenter
+                }
+                Rectangle {
+                    id : imgDecor
+                    width: 20;
+                    x : percentBar.x;
+                    height: 10;
+                    color: "yellow";
+                    //anchors.bottomMargin: percentBar.top  +5;
+                    //anchors.left:percentBar.left;
+                }
+                ParallelAnimation {
+                    id : anim;
+                    //running: true;
+                    PropertyAnimation { target: imgDecor ; property: "x"; from: percentBar.x; to : 50/100*percentBar.width; duration: 1000; }
+                    PropertyAnimation { target: imgDecor ; property: "rotation"; from: 0; to :180; duration: 1000; }
+                }
                 MouseArea {
                     anchors.fill: parent;
                     onClicked: {
@@ -222,6 +246,8 @@ Page {
                         ParallelAnimation{
                             NumberAnimation { target: column; properties: "height"; to: 160; duration: 300; }
                             NumberAnimation { target: detailItem; properties: "opacity"; to: 1 ; easing.type: Easing.InCubic; duration: 300}
+                            PropertyAnimation { target: imgDecor ; property: "x"; from: percentBar.x; to : 50/100*percentBar.width; duration: 1000; easing.type: Easing.OutCubic;}
+                            PropertyAnimation { target: imgDecor ; property: "rotation"; from: 0; to :180; duration: 1000; }
                         }
                     }
                 },
