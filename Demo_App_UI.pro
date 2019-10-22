@@ -39,8 +39,8 @@ HEADERS += \
     controller.h \
     scanningprocess.h
 
-win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../MessagingAppFramework/build/release/ -lmaf
-else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../MessagingAppFramework/build/debug/ -lmaf
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../MessagingAppFramework/Release/ -lmaf
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../MessagingAppFramework/Debug/ -lmaf
 
-INCLUDEPATH += $$PWD/../MessagingAppFramework/build/Debug
-DEPENDPATH += $$PWD/../MessagingAppFramework/build/Debug
+INCLUDEPATH += $$PWD/../MessagingAppFramework/Debug
+DEPENDPATH += $$PWD/../MessagingAppFramework/Debug
