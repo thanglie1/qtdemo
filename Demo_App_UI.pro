@@ -6,7 +6,6 @@ CONFIG += c++17
 # depend on your compiler). Refer to the documentation for the
 # deprecated API to know how to port your code away from it.
 DEFINES += QT_DEPRECATED_WARNINGS
-
 # You can also make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
@@ -39,8 +38,8 @@ HEADERS += \
     controller.h \
     scanningprocess.h
 
-win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../MessagingAppFramework/build/release/ -lmaf
-else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../MessagingAppFramework/build/debug/ -lmaf
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../MessagingAppFramework/Release/ -lmaf
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../MessagingAppFramework/Debug/ -lmaf
 
-INCLUDEPATH += $$PWD/../MessagingAppFramework/build/Debug
-DEPENDPATH += $$PWD/../MessagingAppFramework/build/Debug
+INCLUDEPATH += $$PWD/../MessagingAppFramework/Debug
+DEPENDPATH += $$PWD/../MessagingAppFramework/Debug

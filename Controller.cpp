@@ -1,5 +1,5 @@
 #include "Controller.h"
-#include "..\..\gears-service\GearsContract.h"
+#include "../../gears-service/GearsContract.h"
 
 using namespace maf::messaging::ipc;
 using namespace maf::messaging;
