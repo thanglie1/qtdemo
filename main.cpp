@@ -22,13 +22,13 @@ int main(int argc, char *argv[])
 
     QQmlContext* context = engine.rootContext();
 
-	//ScanningProcess process;
-	//Controller controller;
-	/*Controller* controllerDashboard = new Controller();
-    context->setContextProperty("controllerDashboard", controllerDashboard);*/
+    //ScanningProcess process;
+    Controller controller;
+    Controller* controllerDashboard = new Controller();
+    context->setContextProperty("controllerDashboard", controllerDashboard);
 
-	//Controller* controllerScanning = new Controller();
-	//context->setContextProperty("controllerScanning", controllerScanning);
+    Controller* controllerScanning = new Controller();
+    context->setContextProperty("controllerScanning", controllerScanning);
  //   
  //   QTranslator translator;
  //   QStringList languages;

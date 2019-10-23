@@ -168,12 +168,12 @@ Page {
                     btnQuickScan, process, bottomText];
                 property: "opacity";  from: 1 ; to : 0; duration: 500; }
         }
-//        PropertyAnimation {
-//            target: loader;
-//            property: "source";
-//            to : "Scanning.qml";
-//            duration: 0;
-//        }
+        PropertyAnimation {
+            target: loader;
+            property: "source";
+            to : "Scanning.qml";
+            duration: 0;
+        }
     }
     SequentialAnimation {
         id: startDashboard;

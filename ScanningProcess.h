@@ -9,7 +9,7 @@
 class ScanningProcess : public QObject, maf::messaging::ExtensibleComponent
 {
 	Q_OBJECT
-	//QThread workerThread;
+    QThread workerThread;
 
 private:
 	static ScanningProcess* m_instance;
