@@ -13,7 +13,7 @@ using namespace maf::messaging;
 
 int main(int argc, char *argv[])
 {
-	LocalIPCClient::instance().init(Address{ SERVER_DOMAIN_NAME, 0 });
+	//LocalIPCClient::instance().init(Address{ SERVER_DOMAIN_NAME, 0 });
 
     QApplication app(argc, argv);
    //QGuiApplication app(argc, argv);
@@ -24,8 +24,8 @@ int main(int argc, char *argv[])
 
 	//ScanningProcess process;
 	//Controller controller;
-	Controller* controllerDashboard = new Controller();
-    context->setContextProperty("controllerDashboard", controllerDashboard);
+	/*Controller* controllerDashboard = new Controller();
+    context->setContextProperty("controllerDashboard", controllerDashboard);*/
 
 	//Controller* controllerScanning = new Controller();
 	//context->setContextProperty("controllerScanning", controllerScanning);

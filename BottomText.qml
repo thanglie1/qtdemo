@@ -6,7 +6,7 @@ import "variables.js" as VARIABLES
 
 Item{
     visible: true
-    width: mainWindow.width
+    width: 1280
     height: lbConnect.height
     Item{
         id: itemDelegate

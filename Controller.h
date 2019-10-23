@@ -7,7 +7,7 @@ class Controller : public QObject
 {
 	Q_OBJECT
     QThread workerThread;
-    Q_PROPERTY(QString scanningValue READ getScanningValue NOTIFY scanningValueChanged)
+    //Q_PROPERTY(QString scanningValue READ getScanningValue NOTIFY scanningValueChanged)
 private:
 	int _scanningValue = 0;
     std::shared_ptr<maf::messaging::ipc::LocalIPCServiceProxy> _serviceProxy;
@@ -17,11 +17,11 @@ public:
 	~Controller();
     QString getScanningValue();
 
-public slots:
-	void setScanningValue(int value);
-    void onClicked();
-
-signals:
-    void scanningValueChanged();
-	void operate();
+//public slots:
+//	void setScanningValue(int value);
+//    void onClicked();
+//
+//signals:
+//    void scanningValueChanged();
+//	void operate();
 };

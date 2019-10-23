@@ -6,7 +6,7 @@ import "variables.js" as VARIABLES
 
 Rectangle{
     id: header1;
-    width: mainWindow.width;
+    width: 1280;
     height: 70;
     Image {
         id: icon

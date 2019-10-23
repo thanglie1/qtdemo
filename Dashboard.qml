@@ -6,8 +6,8 @@ import "functions.js" as MyScript
 
 Page {
     visible: true
-    width: mainWindow.width
-    height: mainWindow.height
+    width: 1280
+    height: 900
 
     Label {
         id: lbRisks
@@ -168,12 +168,12 @@ Page {
                     btnQuickScan, process, bottomText];
                 property: "opacity";  from: 1 ; to : 0; duration: 500; }
         }
-        PropertyAnimation {
-            target: loader;
-            property: "source";
-            to : "Scanning.qml";
-            duration: 0;
-        }
+//        PropertyAnimation {
+//            target: loader;
+//            property: "source";
+//            to : "Scanning.qml";
+//            duration: 0;
+//        }
     }
     SequentialAnimation {
         id: startDashboard;
